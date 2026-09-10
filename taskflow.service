@@ -8,14 +8,14 @@ After=TODO                 # ¿qué tiene que estar listo antes de arrancar una 
 
 [Service]
 Type=simple
-User=TODO                  # ¿con qué usuario corre? (el mismo con el que entras por SSH)
-WorkingDirectory=TODO      # ojo: la base H2 se escribe en ./data, relativo a esto
+User=ec2-user                  # ¿con qué usuario corre? (el mismo con el que entras por SSH)
+WorkingDirectory=/opt/taskflow      # ojo: la base H2 se escribe en ./data, relativo a esto
 ExecStart=TODO             # el comando exacto, con rutas ABSOLUTAS
 
 # Spring Boot sale con código 143 cuando lo para systemd. Eso NO es un fallo.
 SuccessExitStatus=143
 
-Restart=TODO               # ¿qué quieres que pase si el proceso muere solo?
+Restart=always               # ¿qué quieres que pase si el proceso muere solo?
 RestartSec=5
 
 [Install]
